@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+	<PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <EnableNETAnalyzers>true</EnableNETAnalyzers>
+        <AnalysisMode>Default</AnalysisMode>  
+        <AssemblyName>Yld.GamingApi.WebApi</AssemblyName>
+        <RootNamespace>Yld.GamingApi.WebApi</RootNamespace>   
+    </PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+	    <DocumentationFile>YldGamingApi.xml</DocumentationFile>
+	    <NoWarn>1701;1702;1591</NoWarn>
+	</PropertyGroup>	
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+	    <DocumentationFile>YldGamingApi.xml</DocumentationFile>
+	</PropertyGroup>	
+    <ItemGroup>
+        <PackageReference Include="AutoMapper" Version="12.0.1" />
+        <PackageReference Include="Euphoric.FluentValidation.AspNetCore" Version="1.1.2" />
+        <PackageReference Include="FluentValidation" Version="11.9.0" />
+        <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    </ItemGroup>	
+    <ItemGroup>
+      <ProjectReference Include="..\Core\GamingApi.Dto\GamingApi.Dto.csproj" />
+      <ProjectReference Include="..\Core\GamingApi.Patterns\GamingApi.Patterns.csproj" />
+      <ProjectReference Include="..\Integration\GamingApi.Integration.csproj" />
+    </ItemGroup>	
+    <ItemGroup>
+      <Content Update="appsettings.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>  
+</Project>
