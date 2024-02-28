@@ -1,4 +1,4 @@
-# YLD Gaming API  
+# Gaming API  
 
 The solution consists of 5 projects:
 
