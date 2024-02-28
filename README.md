@@ -3,13 +3,18 @@
 The solution consists of 5 projects:
 
 **WebApi**: Contains the main API controller, query handler, validator, filter and mapping configuration.
+
 **Dto**: Contains DTO models for request and response
+
 **Patterns**: Contains core interfaces.
+
 **Integration**: Contains logics of interaction with 3rd party service, including DTO and configuration.
+
 **Tests**: Contains unit tests for controller, query handler, validator, mapping and integration service.
 
-This structure can be a little bit extensive or even redundant for the scope of the given task,
-but it will be able to accomodate the following features well.
+
+This structure can be a little bit extensive or even redundant for the scope of the given task, but it will be able to accomodate the following features well.
+
 In case of appearing a specific business logics, a separate domain model should be created
 
 ###  Build and Run
